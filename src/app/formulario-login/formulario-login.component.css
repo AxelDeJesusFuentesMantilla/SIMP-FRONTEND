@@ -1,0 +1,76 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 35vw;
+  margin: 10vh auto;
+  padding: 4vh;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 3vh;
+  font-size: 2.5vh;
+}
+.Bienvenido{
+  font-size: 2.5vh;
+}
+
+.logo {
+  width: 1vw; /* Adjust as needed */
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 2vh;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 4vh;
+}
+
+.form-control {
+  width: 93%;
+  padding: 1.5vh 1vw;
+  font-size: 2vh;
+  border: 0.1vh solid #ccc;
+  border-radius: 1vh;
+}
+
+.password-icon {
+  position: absolute;
+  top: 1.5vh;
+  right: 1vw;
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #011D4D;
+  color: white;
+  padding: 2vh 0;
+  border: none;
+  border-radius: 1vh;
+  font-size: 2.5vh;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #003365;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 2vh;
+  color: #004085;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
