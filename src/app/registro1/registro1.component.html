@@ -1,0 +1,100 @@
+
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="60"
+    alt="Logo"
+    src="assets/images/logo1.png"
+  />
+  <img
+  width="60"
+  alt="Logo policia"
+  src="assets/images/policia.svg"
+/>
+ 
+    <div class="spacer"></div>
+   
+  
+</div>
+
+<div class="content">
+
+
+  <div class="icon-line-container">
+    <img src="assets/images/iconPatrulla.png" alt="Icono de coche de policía" class="icon">
+    <span class="dots"></span>
+    <img src="assets/images/bandera_roja.png" alt="Icono de bandera" class="icon">
+    <span class="dots"></span>
+    <img src="assets/images/stop.png" alt="Icono de señal de stop" class="icon">
+    
+  </div>
+  
+  <!-- Formulario  -->
+  <div class="content">
+    <!-- Iconos y línea de puntos aquí... -->
+  
+    <!-- Formulario -->
+    <h1>¡Comencemos!</h1>
+    <form class="vehicle-form">
+      
+      <div class="form-column">
+        <!-- Elementos de la columna izquierda -->
+        <div class="form-group">
+          <input type="text" id="license" class="form-control" placeholder="TEC - 1234">
+        </div>
+        <div class="form-group state">
+          <label for="state">Estado:</label>
+          <select id="state" name="state">
+            <option *ngFor="let state of mexicanStates" [value]="state">{{ state }}</option>
+            <!-- Agrega las opciones de estados aquí -->
+          </select>
+        </div>
+        <div class="form-group color">
+          <button (click)="openModal()">Color</button>
+          <div class="selected-color-display" [style.background]="selectedColor" *ngIf="selectedColor"></div>
+          <app-color-picker-modal *ngIf="isModalOpen" (colorSelected)="setColor($event)"></app-color-picker-modal>
+        </div>
+        
+      </div>
+      <div class="form-column">
+        <!-- Elementos de la columna derecha -->
+        <div class="form-group brand">
+          <!-- Agrega los controles de Marca aquí -->
+
+          <label for="brand">Marca:</label>
+          <select id="brand">
+            <option value="">Seleccionar --</option>
+            <!-- Opciones de marcas de coches -->
+          </select>
+
+        </div>
+        <div class="form-group model">
+          <!-- Agrega los controles de Modelo aquí -->
+
+          <label for="model">Modelo:</label>
+          <select id="model">
+            <option value="">Seleccionar --</option>
+            <!-- Opciones de modelo -->
+          </select>
+
+        </div>
+        <div class="form-group year">
+          <!-- Agrega los controles de Año aquí -->
+
+          <label for="year">Año:</label>
+          <select id="year">
+            <option value="">Seleccionar --</option>
+            <!-- Opciones de año -->
+          </select>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+  <router-outlet></router-outlet>
+  <div class="navigation-buttons">
+    <button class="nav-button left-button"> < </button>
+    <button class="nav-button right-button"> > </button>
+  </div>
+  
