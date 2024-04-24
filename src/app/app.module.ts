@@ -21,8 +21,11 @@ import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
  //Imports para el ingreso de infraccion
 import { Registro1Component } from './pages/registro1/registro1.component';
 import { ColorPickerModalComponent } from './components/color-picker-modal/color-picker-modal.component';
-
-
+//Imports para Interfaz InfraccionFotos
+import { InfraccionFotosComponent } from './pages/infraccion-fotos/infraccion-fotos.component';
+import { BotonesComponent } from './components/botones/botones.component';
+import { TriangulosFondoLoginComponent } from './components/triangulos-fondo-login/triangulos-fondo-login.component';
+import { Infraccion2FormularioComponent } from './components/infraccion2-formulario/infraccion2-formulario.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,10 @@ import { ColorPickerModalComponent } from './components/color-picker-modal/color
     FormComponent,
     Registro1Component,
     ColorPickerModalComponent,
+    InfraccionFotosComponent,
+    BotonesComponent,
+    TriangulosFondoLoginComponent,
+    Infraccion2FormularioComponent
   ],
   imports: [
     BrowserModule,
