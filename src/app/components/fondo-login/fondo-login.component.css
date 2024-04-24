@@ -1,6 +1,6 @@
 .half-circle {
-    width: 27vw; /* Diameter of the full circle */
-    height: 27vw; /* Should be the same as width for a perfect circle */
+    width: 70vh; /* Diameter of the full circle */
+    height: 70vh; /* Should be the same as width for a perfect circle */
     background-color: #011D4D; /* Or any color */
     border-radius: 50%;
     overflow: hidden; /* This will hide the right half of the circle */
@@ -12,8 +12,8 @@
   /* File path: src/app/login/login.component.css */
 
   .striped-circle {
-    width: 22vw; /* Diameter of the circle */
-    height: 22vw; /* Should be the same as width for a perfect circle */
+    width: 50vh; /* Diameter of the circle */
+    height: 50vh; /* Should be the same as width for a perfect circle */
     background-image: repeating-linear-gradient(
       -45deg, /* Tilt the stripes */
       #011D4D 0%, #011D4D 3.33%, /* Colored stripe: 3.33% of the diameter */

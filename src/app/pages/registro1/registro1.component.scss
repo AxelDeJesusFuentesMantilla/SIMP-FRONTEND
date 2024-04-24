@@ -1,0 +1,249 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+/*Parte de arriba  */
+
+
+
+
+
+h1 {
+    text-align: center; /* Alinea el texto al centro horizontalmente */
+    width: 100%; /* Asegura que el elemento h1 ocupe toda la anchura disponible */
+    margin-top: 0; /* Elimina el margen superior por defecto del h1 si es necesario */
+    margin-bottom: 0.5em; /* Añade un pequeño margen inferior para separarlo del formulario */
+    /* Agrega cualquier otro estilo que necesites para el h1 */
+  }
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color:#011D4D;
+    color: white;
+    font-weight: 600;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px; // Ajusta la posición según sea necesario
+      left: 0;
+      right: 0;
+      height: 10px; // Altura de los cuadros
+      background-image: 
+        repeating-linear-gradient(
+          to right,
+          white, white 10px, // cuadro blanco
+          grey 10px, grey 20px, // cuadro gris
+          rgb(224, 245, 150) 20px, rgb(224, 245, 150) 30px, // cuadro verde
+          white 30px, white 40px, // cuadro blanco
+          grey 40px, grey 50px, // cuadro gris
+          rgb(224, 245, 150) 50px, rgb(224, 245, 150) 60px  // cuadro verde
+        );
+        background-size: 60px 10px; // Ajusta el tamaño del patrón
+  }}
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+
+/*Iconos y puntos  */
+.content {
+    padding: 0 20px; /* Esto añadirá un espacio a los lados del contenido */
+    max-width: 960px; /* Puedes ajustar esto según el ancho máximo que prefieras para tu contenedor */
+    margin: 120px auto; /* Esto centra el contenedor y añade espacio arriba */
+  }
+.content.h1{
+  align-items: center;
+}
+
+.icon-line-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 100px; /* Esto agrega un espacio de 20px a ambos lados del contenedor */
+}
+
+.icon {
+  width: 50px; /* Tamaño de los íconos */
+  height: auto;
+  margin: 0 1px; /* Margen opcional para asegurarse de que los íconos no toquen los puntos */
+}
+
+.dots {
+  flex-grow: 1;
+  margin: 0 10px; /* Espacio entre los íconos y las líneas */
+  background-image: linear-gradient(to right, 
+  transparent, 
+  transparent 14px, /* Espacio transparente antes de la línea */
+  #030303 15px, /* La línea negra */
+  transparent 20px); /* Espacio transparente después de la línea */
+background-size: 20px 100%; /* Ancho y alto de cada repetición del patrón */
+
+  background-repeat: repeat-x;
+  min-height: 5px; /* Esto le da altura a tu línea de puntos */
+}
+
+
+/*Formulario */
+/*Formulario */
+/*Formulario */
+.vehicle-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Nuevo - alinea los elementos verticalmente */
+    max-width: 100%;
+    width: 100%; /* Nuevo - permite que el formulario se ajuste al ancho de la ventana */
+    min-height: 50vh; /* Nuevo - mínimo de altura del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px;
+    gap: 20px;
+    padding: 20px; /* Añade padding alrededor del formulario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }  
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    padding: 0 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .form-group select, .form-group button {
+    width: auto; /* Permite que el elemento se ajuste al contenido */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    min-width: 250px; /* Ancho mínimo para que se vea más grande */
+    max-width: 100%; /* No excederá el ancho de su contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+     
+}
+  
+  @media (max-width: 768px) {
+    .vehicle-form {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+    .form-column {
+      width: 100%; /* Las columnas ocupan el ancho completo en pantallas pequeñas */
+    }
+  }
+
+  
+
+  /*Selector de  colores */
+.color-picker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ajusta el número de columnas según necesites */
+    gap: 10px; /* Espacio entre los colores */
+    margin-bottom: 10px; /* Espacio por debajo de la paleta antes del botón */
+  }
+  
+  .color-option {
+    width: 40px; /* Tamaño de los botones de color */
+    height: 40px;
+    border-radius: 50%; /* Hace que los botones sean circulares */
+    cursor: pointer;
+    border: 2px solid transparent; /* Borde transparente que se cambiará cuando esté seleccionado */
+  }
+    
+  .color.selected {
+    border-color: #000; /* borde negro para el color seleccionado */
+  }
+  .selected-color-display {
+    display: inline-block;
+    width: 40px; /* O el tamaño que prefieras para el cuadro de color seleccionado */
+    height: 40px;
+
+    border-radius: 50%; /* Hace que el cuadro de color sea redondo */
+    margin-left: 10px; /* Espacio entre el botón y el cuadro de color */
+  }
+  .form-group.color {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+  
+  .form-group.color .selected-color-display {
+    margin-left: auto; /* Empuja el círculo hacia la derecha */
+    margin-top: -40px;
+
+  }
+
+  /* Estilos para el botón de navegación */
+.next-page-button {
+  position: fixed;
+  right: 10px; /* o la distancia que quieras del borde derecho */
+  top: 50%; /* centra el botón verticalmente */
+  transform: translateY(-50%); /* ajusta este valor para alinear el botón perfectamente en el centro */
+  
+  bottom: 10px; /* Ajusta según tu diseño */
+  z-index: 1000; /* Asegúrate de que el botón esté sobre otros elementos */
+  background-color: #011D4D; /* Color de fondo azul oscuro */
+  color: white; /* Color del texto (flecha) */
+  border: none; /* Sin borde */
+  border-top-left-radius: 30px; /* Borde redondeado para la parte superior izquierda */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Altura del botón */
+  font-size: 24px; /* Tamaño de la flecha */
+  line-height: 50px; /* Alineación vertical de la flecha */
+  text-align: center; /* Alineación horizontal de la flecha */
+  cursor: pointer; /* Estilo del cursor para indicar que es clickeable */
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+
+  
+}
+
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: #0044cc; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding around text */
+  font-size: 16px; /* Text size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.nav-button.left-button {
+  /* Additional styling if needed for left button */
+}
+
+.nav-button.right-button {
+  /* Additional styling if needed for right button */
+}
+
+.nav-button:hover {
+  background-color: #003399; /* Darker blue background on hover */
+}
