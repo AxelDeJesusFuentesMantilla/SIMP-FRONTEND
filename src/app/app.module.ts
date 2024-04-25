@@ -9,6 +9,7 @@ import { MainContentComponent } from './pages/ingreso-de-placas/main-content/mai
 import { CountdownTimerComponent } from './components/countdown-timer/countdown-timer.component';
 import { BusquedaLogradaComponent } from './pages/busqueda-lograda/busqueda-lograda.component';
 import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
+import { BusquedaIncorrectaComponent } from './pages/busqueda-incorrecta/busqueda-incorrecta.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
     MainContentComponent,
     CountdownTimerComponent,
     BusquedaLogradaComponent,
-    FormComponent
+    FormComponent,
+    BusquedaIncorrectaComponent
   ],
   imports: [
     BrowserModule,
