@@ -1,38 +1,97 @@
 .boton {
-    position: fixed;
-    left: 0;
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior de la pantalla */
-    top: calc(40vh + 40px); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed;
+  left: 0;
+  bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
+  top: calc(
+    40vh + 40px
+  ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .boton img {
-    width: 160px; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
-    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
-    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
+  width: 15vw; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 30vh; /* Permite que la altura se ajuste automáticamente según el ancho */
+  cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
+  transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
+  margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
 }
 
 .boton img:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+  transform: scale(
+    1.1
+  ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
 }
 
 .Boton {
-    position: fixed;
-    right: 0;
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior de la pantalla */
-    top: calc(40vh + 40px); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed;
+  right: 0;
+  bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
+  top: calc(
+    40vh + 40px
+  ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .Boton img {
-    width: 138px; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
-    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
-    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
-    margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
+  width: 15vw; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 30vh; /* Permite que la altura se ajuste automáticamente según el ancho */
+  cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
+  transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
+  margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
 }
 
 .Boton img:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+  transform: scale(
+    1.1
+  ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+}
+
+@media (min-width: 992px) {
+  .boton {
+    position: fixed;
+    left: 0;
+    bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
+    top: calc(
+      40vh + 40px
+    ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+
+  .boton img {
+    width: 10vw; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 50vh; /* Permite que la altura se ajuste automáticamente según el ancho */
+    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
+    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
+    margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
+  }
+
+  .boton img:hover {
+    transform: scale(
+      1.1
+    ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+  }
+
+  .Boton {
+    position: fixed;
+    right: 0;
+    bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
+    top: calc(
+      40vh + 40px
+    ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+
+  .Boton img {
+    width: 10vw; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 50vh; /* Permite que la altura se ajuste automáticamente según el ancho */
+    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
+    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
+    margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
+  }
+
+  .Boton img:hover {
+    transform: scale(
+      1.1
+    ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+  }
 }
