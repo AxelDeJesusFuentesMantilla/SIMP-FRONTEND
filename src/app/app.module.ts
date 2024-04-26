@@ -29,6 +29,7 @@ import { Infraccion2FormularioComponent } from './components/infraccion2-formula
 import { Infraccion5Component } from './pages/infraccion5/infraccion5.component';
 import { FormularioInfraccion5Component } from './components/formulario-infraccion5/formulario-infraccion5.component';
 import { BarraDeProgresoComponent } from './components/barra-de-progreso/barra-de-progreso.component';
+import { InfraccionesAgregadasComponent } from './components/infracciones-agregadas/infracciones-agregadas.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { BarraDeProgresoComponent } from './components/barra-de-progreso/barra-d
     Infraccion2FormularioComponent,
     Infraccion5Component,
     FormularioInfraccion5Component,
-    BarraDeProgresoComponent
+    BarraDeProgresoComponent,
+    InfraccionesAgregadasComponent
   ],
   imports: [
     BrowserModule,
