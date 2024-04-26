@@ -26,6 +26,9 @@ import { InfraccionFotosComponent } from './pages/infraccion-fotos/infraccion-fo
 import { BotonesComponent } from './components/botones/botones.component';
 import { TriangulosFondoLoginComponent } from './components/triangulos-fondo-login/triangulos-fondo-login.component';
 import { Infraccion2FormularioComponent } from './components/infraccion2-formulario/infraccion2-formulario.component';
+import { Infraccion5Component } from './pages/infraccion5/infraccion5.component';
+import { FormularioInfraccion5Component } from './components/formulario-infraccion5/formulario-infraccion5.component';
+import { BarraDeProgresoComponent } from './components/barra-de-progreso/barra-de-progreso.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { Infraccion2FormularioComponent } from './components/infraccion2-formula
     InfraccionFotosComponent,
     BotonesComponent,
     TriangulosFondoLoginComponent,
-    Infraccion2FormularioComponent
+    Infraccion2FormularioComponent,
+    Infraccion5Component,
+    FormularioInfraccion5Component,
+    BarraDeProgresoComponent
   ],
   imports: [
     BrowserModule,

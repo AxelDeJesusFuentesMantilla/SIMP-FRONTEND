@@ -6,12 +6,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { Registro1Component } from './pages/registro1/registro1.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { InfraccionFotosComponent } from './pages/infraccion-fotos/infraccion-fotos.component';
-
+import { Infraccion5Component } from './pages/infraccion5/infraccion5.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },  
   { path: 'busqueda-lograda', component: BusquedaLogradaComponent },
   { path: 'ingreso-de-placas', component: MainContentComponent },
   { path: 'infraccion-1', component: Registro1Component},
+  { path: 'infraccion-2', component: Infraccion5Component},
   { path: 'infraccion-fotos', component: InfraccionFotosComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
