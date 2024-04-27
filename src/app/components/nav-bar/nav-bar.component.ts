@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   // Cualquier lógica adicional para la barra de navegación
+  @Input() showTimer: boolean = true; // Propiedad de entrada para mostrar el temporizador
 }
