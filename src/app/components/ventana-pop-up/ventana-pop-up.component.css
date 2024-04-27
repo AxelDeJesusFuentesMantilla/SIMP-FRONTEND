@@ -1,0 +1,196 @@
+.image-card {
+    cursor: pointer; /* Añade estilos para posicionar la imagen */
+    position: absolute;
+    top: calc(40px + 50%); /* Alinea la parte superior de la imagen con la mitad de la altura del botón */
+    margin-top: -80px; /* Ajusta el margen superior para centrar verticalmente la imagen */
+  }
+  
+  .image-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave alrededor de la imagen */
+  }
+    /* Estilos para el fondo oscurecido con efecto de enfoque */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(128, 128, 128, 0.5); /* Color de fondo gris con una opacidad del 50% */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque al fondo */
+    }
+  
+  /* Estilos para el pop-up */
+  .popup {
+    background: rgba(180, 180, 180, 0.7); /* Fondo gris con una opacidad del 70% */
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Efecto glass */
+  }
+  
+  /* Estilos para el botón de cierre */
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #ffffff; /* Color de texto blanco */
+    transition: all 0.3s ease; /* Transición suave */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px 8px; /* Espaciado interno para hacer el área de clic más grande */
+    margin-top: -80px;
+    margin-left: -26px;
+  }
+  
+  .close-button:hover {
+    color: #ffffff; /* Texto blanco para mejor contraste en el hover */
+    background-color: #0c3170; /* Azul al pasar el mouse */
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+    
+  }
+  .popup-buttons {
+    text-align: center; /* Centra horizontalmente los botones */
+  }
+  
+  /* Estilos para los botones dentro del pop-up */
+  .popup-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0c3170; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #2959ac; /* Color de fondo al pasar el mouse */
+  }
+
+/* Ajustes adicionales para pantallas aún más pequeñas */
+@media (max-width: 320px) {
+    .image-card {
+        top: calc(10px + 50%); /* Ajusta el posicionamiento para pantallas más pequeñas */
+        margin-top: -50px; /* Ajusta el margen para centrar verticalmente */
+    }
+
+    .image-card:hover {
+        transform: scale(1.02); /* Menos efecto de hover para dispositivos pequeños */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Reduce el efecto de sombra */
+    }
+}
+/* Estilos para el pop-up */
+.popup {
+    background: rgba(180, 180, 180, 0.7); /* Fondo gris con una opacidad del 70% */
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Efecto glass */
+  }
+  
+  /* Estilos para el botón de cierre */
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white; /* Color de texto blanco */
+    transition: transform 0.3s ease; /* Transición suave */
+    margin-top: -80px;
+    margin-left: -26px;
+  }
+  
+  .close-button:hover {
+    transform: scale(0.9); /* Efecto de escala al pasar el mouse */
+  }
+  .popup-buttons {
+    text-align: center; /* Centra horizontalmente los botones */
+  }
+  
+  /* Estilos para los botones dentro del pop-up */
+  .popup-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0c3170; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #2959ac; /* Color de fondo al pasar el mouse */
+  }
+  h2 {
+    
+    text-align: center; /* Alinea el texto al centro horizontalmente */
+    width: 100%; /* Asegura que el elemento h1 ocupe toda la anchura disponible */
+    margin-bottom: 2.5em; /* Añade un pequeño margen inferior para separarlo del formulario */
+    font-size: 1.5em; /* Tamaño de fuente grande */
+    color: #ffffff; /* Color de texto oscuro */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto para darle un efecto 3D */
+  }
+
+  /*---- RESPONSIVIDAD--------------*/
+  /* Responsividad para pantallas de dispositivos móviles */
+@media (max-width: 480px) {
+    .popup {
+        width: 80%; /* Aumenta el ancho para pantallas pequeñas */
+        padding: 15px; /* Ajusta el padding */
+        border-radius: 8px; /* Ajusta el borde redondeado */
+    }
+
+    .close-button {
+        font-size: 1.1rem; /* Reduce el tamaño de fuente */
+        margin-top: -60px; /* Ajusta el margen superior */
+        margin-left: -20px; /* Ajusta el margen izquierdo */
+    }
+
+    .popup-buttons button {
+        padding: 8px 15px; /* Ajusta el padding */
+        font-size: 14px; /* Reduce el tamaño de fuente */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Reduce el tamaño del encabezado */
+    }
+}
+
+/* Ajustes adicionales para pantallas aún más pequeñas */
+@media (max-width: 320px) {
+    .popup {
+        width: 90%; /* Ancho mayor para pantallas muy estrechas */
+        padding: 10px; /* Reduce el padding */
+        border-radius: 5px; /* Borde redondeado menor */
+    }
+
+    .close-button {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+        margin-top: -40px; /* Ajusta el margen superior */
+        margin-left: -15px; /* Ajusta el margen izquierdo */
+    }
+
+    .popup-buttons button {
+        padding: 6px 10px; /* Ajusta el padding */
+        font-size: 12px; /* Reduce el tamaño de fuente */
+    }
+
+    h2 {
+        font-size: 1em; /* Tamaño menor para el encabezado */
+    }
+}
+  

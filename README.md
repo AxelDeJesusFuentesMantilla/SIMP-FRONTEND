@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # SIMPFRONTEND
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+=======
+# Placas
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+>>>>>>> interfaces
 
 ## Development server
 

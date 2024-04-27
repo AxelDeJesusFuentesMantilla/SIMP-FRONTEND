@@ -1,0 +1,21 @@
+<div class="rightForm">
+                       
+    <!-- Card para hacer clic y abrir el pop-up -->
+    <div class="image-card" (click)="togglePopup()">
+      <!-- Añade tu contenido de imagen o texto aquí -->
+      <img width=200 src="assets/icons/card.png" alt="Añadir fotos">
+    </div>
+</div>
+ <!-- Pop-up con efecto de enfoque tipo glass -->
+ <div class="overlay" *ngIf="isPopupVisible">
+  <div class="popup">
+    <div class="popup-header">
+      <button class="close-button" (click)="togglePopup()">X</button>
+    </div>
+    <h2>¿Qué desea hacer?</h2>
+    <div class="popup-buttons">
+      <button (click)="takePhoto()">Tomar Foto</button>
+      <button (click)="chooseFromGallery()">Elegir de Galería</button>
+    </div>
+  </div>
+</div>

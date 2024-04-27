@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "SIMP-FRONTEND": {
+=======
+    "placas": {
+>>>>>>> interfaces
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/simp-frontend",
+=======
+            "outputPath": "dist/placas",
+>>>>>>> interfaces
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +68,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "browserTarget": "SIMP-FRONTEND:build:production"
             },
             "development": {
               "browserTarget": "SIMP-FRONTEND:build:development"
+=======
+              "browserTarget": "placas:build:production"
+            },
+            "development": {
+              "browserTarget": "placas:build:development"
+>>>>>>> interfaces
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +86,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "SIMP-FRONTEND:build"
+=======
+            "browserTarget": "placas:build"
+>>>>>>> interfaces
           }
         },
         "test": {
@@ -94,5 +113,11 @@
         }
       }
     }
+<<<<<<< HEAD
+=======
+  },
+  "cli": {
+    "analytics": "f11cee2b-f86b-4f9e-9ece-cb6925873fb6"
+>>>>>>> interfaces
   }
 }

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "simp-frontend",
+=======
+  "name": "placas",
+>>>>>>> interfaces
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -24,7 +28,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.11",
+<<<<<<< HEAD
     "@angular/cli": "~15.2.11",
+=======
+    "@angular/cli": "~15.0.0",
+>>>>>>> interfaces
     "@angular/compiler-cli": "^15.2.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
