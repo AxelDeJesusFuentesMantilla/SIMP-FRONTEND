@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-registro1',
   templateUrl: './registro1.component.html',
-  styleUrls: ['./registro1.component.scss']
+  styleUrls: ['./registro1.component.css']
 })
 export class Registro1Component { 
   constructor(private router: Router) { }
