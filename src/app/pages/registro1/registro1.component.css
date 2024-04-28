@@ -35,21 +35,21 @@ h1 {
     &::after {
       content: '';
       position: absolute;
-      bottom: -10px; // Ajusta la posición según sea necesario
+      bottom: -10px; 
       left: 0;
       right: 0;
-      height: 10px; // Altura de los cuadros
+      height: 10px; 
       background-image: 
         repeating-linear-gradient(
           to right,
-          white, white 10px, // cuadro blanco
-          grey 10px, grey 20px, // cuadro gris
-          rgb(224, 245, 150) 20px, rgb(224, 245, 150) 30px, // cuadro verde
-          white 30px, white 40px, // cuadro blanco
-          grey 40px, grey 50px, // cuadro gris
-          rgb(224, 245, 150) 50px, rgb(224, 245, 150) 60px  // cuadro verde
+          white, white 10px, 
+          grey 10px, grey 20px, 
+          rgb(224, 245, 150) 20px, rgb(224, 245, 150) 30px, 
+          white 30px, white 40px,
+          grey 40px, grey 50px,
+          rgb(224, 245, 150) 50px, rgb(224, 245, 150) 60px  
         );
-        background-size: 60px 10px; // Ajusta el tamaño del patrón
+        background-size: 60px 10px; 
   }}
   a,
   a:visited,
@@ -236,14 +236,3 @@ background-size: 20px 100%; /* Ancho y alto de cada repetición del patrón */
   cursor: pointer; /* Pointer cursor on hover */
 }
 
-.nav-button.left-button {
-  /* Additional styling if needed for left button */
-}
-
-.nav-button.right-button {
-  /* Additional styling if needed for right button */
-}
-
-.nav-button:hover {
-  background-color: #003399; /* Darker blue background on hover */
-}
