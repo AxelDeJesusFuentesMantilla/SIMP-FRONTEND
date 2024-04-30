@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-infraccion5',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulario-infraccion5.component.css'],
 })
 export class FormularioInfraccion5Component {
+  constructor(private route: Router) {
+    
+  }
+
   infracciones = [
     {
       folio: '',
@@ -40,5 +45,10 @@ export class FormularioInfraccion5Component {
 
   chooseFromGallery() {
     // Lógica para elegir una foto de la galería
+  }
+
+  irAPagina(titulo: string):void{
+    this.route.navigate([titulo]);
+
   }
 }

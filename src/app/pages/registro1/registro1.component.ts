@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro1.component.scss']
 })
 export class Registro1Component { 
-  constructor(private router: Router) { }
+  constructor(private route: Router) { }
 
   goToNextPage() {
     // Asume que tienes una ruta configurada en tu módulo de enrutamiento para 'next-page'
-    this.router.navigate(['/app.component.html']); // Cambia '/next-page' por la ruta real que quieras usar
+    this.route.navigate(['/app.component.html']); // Cambia '/next-page' por la ruta real que quieras usar
   }
   
    mexicanStates: string[] = [
@@ -58,6 +58,11 @@ export class Registro1Component {
   setColor(color: string) {
     this.selectedColor = color;
     this.isModalOpen = false; // presumiblemente quieres cerrar el modal cuando un color es seleccionado
+  }
+
+  irAPagina(titulo: string):void{
+    this.route.navigate([titulo]);
+
   }
 }
 

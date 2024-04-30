@@ -85,7 +85,7 @@ input[type="text"] {
   padding: 10px;
   display: flex;
   justify-content: center;
-  align-items: start; /* Alinea el botón con el inicio del contenedor */
+  align-items: flex-start; /* Alinea el botón con el inicio del contenedor */
 }
 
 .add-button {
@@ -217,7 +217,7 @@ app-footer {
     padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: start; /* Alinea el botón con el inicio del contenedor */
+    align-items: flex-start; /* Alinea el botón con el inicio del contenedor */
   }
 
   .add-button {

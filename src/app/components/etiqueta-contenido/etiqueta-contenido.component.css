@@ -1,0 +1,31 @@
+/*Nota: Son las etiquetas de color azul*/
+
+/* Estilos para las etiquetas */
+.etiqueta, .Etiqueta {
+    font-weight: bold; /* Establece el texto en negrita */
+    font-family: 'Now', sans-serif; /* Establece una fuente elegante */
+    font-size: 1.5em; /* Tamaño de fuente grande */
+    color: #03135c; /* Color de texto oscuro */
+  }
+  
+  .contenedor-etiquetas {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between; /* Alinea los elementos al extremo izquierdo y derecho */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0% 20px;
+  }
+
+  /*-----------RESPONSIVIDAD---------*/
+  /* Ajustes de responsividad para pantallas estrechas como 280x653 */
+@media (max-width: 320px) { 
+  /* Si el ancho de la pantalla es muy estrecho, ajustamos el diseño */
+  .etiqueta, .Etiqueta {
+      font-size: 1.2em; /* Reduce el tamaño de fuente para adaptarse a pantallas estrechas */
+  }
+
+  .contenedor-etiquetas {
+      flex-direction: column; /* Cambia a una disposición en columna para ahorrar espacio horizontal */
+      align-items: flex-start; /* Alinea las etiquetas hacia la izquierda */
+      padding: 0 10px; /* Reduce el padding para pantallas muy estrechas */
+  }
+}

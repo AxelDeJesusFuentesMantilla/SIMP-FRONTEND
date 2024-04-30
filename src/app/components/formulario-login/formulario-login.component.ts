@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-login',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormularioLoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private route: Router) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required]]
@@ -21,6 +22,11 @@ export class FormularioLoginComponent {
       // Handle login logic here
       console.log('Form Values', this.loginForm.value);
     }
+  }
+
+  irAPagina(titulo: string):void{
+    this.route.navigate([titulo]);
+
   }
 
 }

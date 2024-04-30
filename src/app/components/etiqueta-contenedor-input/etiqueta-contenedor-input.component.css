@@ -1,0 +1,18 @@
+.Nombre{
+    margin-top: 80px;
+}
+#nombre {
+    font-family:'Now', sans-serif;
+    display: inline-block; /* Para que la etiqueta y el input estén en la misma línea */
+    text-align: left; /* Alinea la etiqueta a la izquierda */
+    width: auto; /* Permitir que la etiqueta tome el ancho necesario según su contenido */
+    margin-right: 10px; /* Agrega un pequeño espacio a la derecha del label */
+    font-weight: bold; /* Establece el texto en negrita */
+    color: #03135c; /* Color de texto oscuro */
+}
+
+#input-nombre {
+    width: 130px; /* Ancho medio */
+    height: 15px; /* Altura mediana */
+    font-size: 14px; /* Tamaño de fuente mediano */    
+}

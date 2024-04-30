@@ -18,7 +18,7 @@ import { SearchComponent } from './pages/ingreso-de-placas/search/search.compone
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CountdownTimerComponent } from './components/countdown-timer/countdown-timer.component';
 import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
- //Imports para el ingreso de infraccion
+//Imports para el ingreso de infraccion
 import { Registro1Component } from './pages/registro1/registro1.component';
 import { ColorPickerModalComponent } from './components/color-picker-modal/color-picker-modal.component';
 //Imports para Interfaz InfraccionFotos
@@ -30,6 +30,24 @@ import { Infraccion5Component } from './pages/infraccion5/infraccion5.component'
 import { FormularioInfraccion5Component } from './components/formulario-infraccion5/formulario-infraccion5.component';
 import { BarraDeProgresoComponent } from './components/barra-de-progreso/barra-de-progreso.component';
 import { InfraccionesAgregadasComponent } from './components/infracciones-agregadas/infracciones-agregadas.component';
+import { BusquedaIncorrectaComponent } from './pages/busqueda-incorrecta/busqueda-incorrecta.component';
+
+// pages
+
+import { PerfilVeicularComponent } from './pages/perfil-veicular/perfil-veicular.component';
+import { Infraccion9Component } from './pages/infraccion9/infraccion9.component';
+
+//components
+
+import { BotonesLateralesComponent } from './components/botones-laterales/botones-laterales.component';
+import { Infraccion8Component } from './pages/infraccion8/infraccion8.component'; 
+import { IconLineContainerComponent } from './components/icon-line-container/icon-line-container.component';
+import { LetreroSuperiorComponent } from './components/letrero-superior/letrero-superior.component';
+import { BotonElegirUbicacionComponent } from './components/boton-elegir-ubicacion/boton-elegir-ubicacion.component';
+import { EtiquetaContenidoComponent } from './components/etiqueta-contenido/etiqueta-contenido.component';
+import { LineaHorizontalComponent } from './components/linea-horizontal/linea-horizontal.component';
+import { VentanaPopUpComponent } from './components/ventana-pop-up/ventana-pop-up.component';
+import { HistorialComponent } from './pages/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +56,6 @@ import { InfraccionesAgregadasComponent } from './components/infracciones-agrega
     FormularioLoginComponent,
     LoginComponent,
     PagenotfoundComponent,
-    AppComponent,
     SearchComponent,
     NavBarComponent,
     MainContentComponent,
@@ -54,13 +71,32 @@ import { InfraccionesAgregadasComponent } from './components/infracciones-agrega
     Infraccion5Component,
     FormularioInfraccion5Component,
     BarraDeProgresoComponent,
-    InfraccionesAgregadasComponent
+    InfraccionesAgregadasComponent,
+    BusquedaIncorrectaComponent,
+    PerfilVeicularComponent,
+    Infraccion9Component,
+    SearchComponent,
+    NavBarComponent,
+    MainContentComponent,
+    CountdownTimerComponent,
+    BusquedaLogradaComponent,
+    FormComponent,
+    BotonesLateralesComponent,
+    Infraccion8Component,
+    IconLineContainerComponent,
+    LetreroSuperiorComponent,
+    BotonElegirUbicacionComponent,
+    EtiquetaContenidoComponent,
+    LineaHorizontalComponent,
+    VentanaPopUpComponent,
+    HistorialComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
