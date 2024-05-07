@@ -1,0 +1,46 @@
+.Tabla-infracciones {
+  margin-top: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+table {
+  width: 100%;
+  align-items: center;
+  border-collapse: collapse; /* Cambiado a 'separate' para permitir bordes redondeados */
+  border-spacing: 0; /* Elimina el espacio entre celdas */
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Establece los bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr {
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar interactividad */
+}
+
+tbody tr:hover {
+  background-color: #e8f4f8; /* Un color de fondo al hacer hover para feedback visual */
+}
+
+th,td {
+  text-align: center;
+  padding: 8px; /* Espaciado interno para texto */
+}
+
+td {
+  border-bottom: 1px solid #ddd; /* Borde gris para las celdas */
+}
+
+th {
+  text-align: center;
+  background-color: #011d4d; /* Color de fondo para los encabezados */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Color de fondo para las filas pares */
+  border-radius: 10px; /* Establece los bordes redondeados */
+}

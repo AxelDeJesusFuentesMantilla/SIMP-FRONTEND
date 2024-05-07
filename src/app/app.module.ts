@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatToolbarModule }  from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { FondoLoginComponent } from './components/fondo-login/fondo-login.component';
@@ -38,7 +43,6 @@ import { PerfilVeicularComponent } from './pages/perfil-veicular/perfil-veicular
 import { Infraccion9Component } from './pages/infraccion9/infraccion9.component';
 
 //components
-
 import { BotonesLateralesComponent } from './components/botones-laterales/botones-laterales.component';
 import { Infraccion8Component } from './pages/infraccion8/infraccion8.component'; 
 import { IconLineContainerComponent } from './components/icon-line-container/icon-line-container.component';
@@ -48,6 +52,12 @@ import { EtiquetaContenidoComponent } from './components/etiqueta-contenido/etiq
 import { LineaHorizontalComponent } from './components/linea-horizontal/linea-horizontal.component';
 import { VentanaPopUpComponent } from './components/ventana-pop-up/ventana-pop-up.component';
 import { HistorialComponent } from './pages/historial/historial.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ConsultaInicioComponent } from './pages/consulta-inicio/consulta-inicio.component';
+import { ConsultaFiltroComponent } from './components/consulta-filtro/consulta-filtro.component';
+import { ConsultaTablaInfraccionesComponent } from './components/consulta-tabla-infracciones/consulta-tabla-infracciones.component';
+import { ConsultaLabelComponent } from './components/consulta-label/consulta-label.component';
+
 
 @NgModule({
   declarations: [
@@ -90,6 +100,12 @@ import { HistorialComponent } from './pages/historial/historial.component';
     LineaHorizontalComponent,
     VentanaPopUpComponent,
     HistorialComponent,
+    SidenavComponent,
+    ConsultaInicioComponent,
+    ConsultaFiltroComponent,
+    ConsultaTablaInfraccionesComponent,
+    ConsultaLabelComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -97,6 +113,12 @@ import { HistorialComponent } from './pages/historial/historial.component';
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot([]),
+    MatButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

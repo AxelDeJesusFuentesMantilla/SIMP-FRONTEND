@@ -1,0 +1,26 @@
+<div class="Tabla-infracciones">
+  <table>
+    <thead>
+      <tr>
+        <th>CLAVE</th>
+        <th>OFICIAL</th>
+        <th>FECHA</th>
+        <th>PLACA VEHICULAR</th>
+        <th>TIPO DE LICENCIA</th>
+        <th>ESTADO</th>
+        <th>ACCIÓN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of records" (click)="onRowClicked(record)">
+        <td>{{ record.clave }}</td>
+        <td>{{ record.oficial }}</td>
+        <td>{{ record.fecha }}</td>
+        <td>{{ record.placaVehicular }}</td>
+        <td>{{ record.tipoDeLicencia }}</td>
+        <td>{{ record.estado }}</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
