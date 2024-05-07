@@ -2,12 +2,12 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .sidebar {
   height: 100%;
-  width: 250px;
+  width: 22vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@ html {
 }
 
 .sidebar ul li {
-  padding: 10px;
+  padding: 1vw;
 }
 
 .sidebar ul li a {
@@ -32,7 +32,7 @@ html {
 }
 
 .content {
-  margin-left: 250px;
+  margin-left: 40vh;
   padding: 20px;
 }
 
@@ -61,10 +61,13 @@ html {
 }
 .parte1 {
   width: 30%;
+  margin-right: 0;
 }
 .parte2 {
+  margin-left: 0;
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   font-family: "Inter", sans-serif;
+  font-size: 1.3vw;
 }

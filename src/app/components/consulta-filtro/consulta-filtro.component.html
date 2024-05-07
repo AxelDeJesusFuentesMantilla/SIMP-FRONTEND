@@ -1,6 +1,6 @@
 <!-- search-filter.component.html -->
 <div class="search-filter">
-    <h1>Filtro de Busqueda</h1>
+  <h1>Filtro de Busqueda</h1>
   <div class="filter-section">
     <label for="document-input">Ingresar documento:</label>
     <input
@@ -8,7 +8,9 @@
       id="document-input"
       placeholder="Número de licencia, serie, placa, permiso"
     />
-    <button (click)="onSearchDocument()">BUSCAR</button>
+    <button type="button" class="btn btn-primary" (click)="onSearchDocument()">
+      <i class="fa fa-search"></i> Buscar
+    </button>
   </div>
 
   <div class="date-filter">
@@ -25,6 +27,8 @@
 
       <input type="date" id="end-date" />
     </div>
-    <button (click)="onSearchByDate()">BUSCAR</button>
+    <button type="button" class="btn btn-primary" (click)="onSearchByDate()">
+      <i class="fa fa-search"></i> Buscar
+    </button>
   </div>
 </div>

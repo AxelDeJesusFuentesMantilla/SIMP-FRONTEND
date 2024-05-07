@@ -28,16 +28,13 @@ export class ConsultaTablaInfraccionesComponent {
     },
   ];
 
+  
+  expandedIndex: number | null = null;
+
   constructor() {}
-  onRowClicked(record: any): void {
-    console.log('Registro seleccionado:', record);
-    // Aquí puedes agregar más lógica como abrir un modal, mostrar un detalle, etc.
+  
+  toggleDetail(index: number): void {
+    this.expandedIndex = this.expandedIndex === index ? null : index;
   }
-  // Método para editar un registro
-  editRecord(record: any): void {
-    // Aquí puedes agregar la lógica para manejar la edición
-    console.log('Editar registro:', record);
-    // Por ejemplo, podrías abrir un modal aquí o redirigir a una página de edición
-  }
-  // Métodos para manejar los datos (p.ej., agregar, eliminar registros) pueden ser añadidos aquí
+
 }
