@@ -1,0 +1,156 @@
+/*----Estilos para el letrero del componente icon-line----*/
+#icon-line-letrero{
+    font-family: 'Bellota Text', sans-serif; /* Aplicamos la fuente "Bellota Text" */
+    text-align: center; /* Alineamos el texto al centro horizontalmente */
+    font-size: 1.5em; /* Tamaño del texto*/
+    color: #020202; /* Color para el texto */
+    letter-spacing: 0.125em; /* Espaciado entre letras*/
+    text-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.3); /* Sombra de texto para efecto 3D */
+  }
+  
+  /*-------ESTILOS DEL CONTENEDOR DEL CENTRO-----------*/
+  
+  .contenedor-principal {
+      display: flex; /* Usamos flexbox para organizar en columnas */
+      justify-content: space-between; /* Espacio entre los contenedores para separarlos */
+      align-items: flex-start; /* Alineamos los elementos al inicio */
+    }
+    
+    .contenedor-izquierda {
+      flex: 1; /* Permitimos que el contenedor crezca y ocupe el espacio disponible */
+    }
+    
+    .contenedor-derecha {
+      flex: 1; /* Permitimos que el contenedor crezca y ocupe el espacio disponible */
+      
+    }
+  
+    /*-----------ESTILOS DE LOS ELEMENTOS DEL CONTENEDOR DEL CENTRO-----*/
+  
+    /*----LADO IZQUIERDO-----------*/
+    #contenedor-izquierda-letrero{
+      font-family: 'Bellota Text', sans-serif; /* Aplicamos la fuente "Bellota Text" */
+      text-align: center; /* Alineamos el texto al centro horizontalmente */
+      font-size: 1.5em; /* Tamaño del texto*/
+      color: #020202; /* Color para el texto */
+      letter-spacing: 0.125em; /* Espaciado entre letras*/
+    }
+    .ubicacion{
+      display: flex; /* Configura el contenedor como Flexbox */
+      align-items: center; /* Alinea verticalmente al centro */
+      justify-content: flex-start; /* Alinea horizontalmente al inicio */
+      margin-top: 10%;
+      margin-left: 30%;
+      margin-bottom: 20%;
+      gap: 0.125rem;
+    }
+    #icono-ubicacion{
+      width:2.5rem ;
+    }
+    #boton-ubicacion{
+      font-family: 'ABeeZee', sans-serif; /* Aplicamos la fuente*/
+      color: #fff; /*color del texto del botón*/
+      border: 0.125rem solid #011D4D; /* Borde del botón*/
+      background-color: #011D4D; /* Color de fondo del botón */
+      border-radius: 0.4em; /* Bordes redondeados para suavizar el botón */
+      padding: 0.3em 1.3em; /* Espaciado interno horizontal y vertical */
+      transition: all 0.2s ease-in-out; /* Transición suave para cambios */
+      font-size: 1rem; /* Tamaño de fuente relativa, aproximadamente 16px */
+  
+    }
+    #boton-ubicacion:hover {
+      color: #fff;
+      background-color: #0c3170; /* Cambia el color de fondo al pasar el mouse */
+      transform: scale(1.05); /* Efecto de escala para hacer el botón un poco más grande */
+      border: 0.125rem solid #0c3170; /* Cambia el color del borde para coincidir con el nuevo fondo */
+    }
+  
+    #imagen-linea{
+      width: 12.5rem;
+      height: 1.5625rem;
+      margin-inline: 33%;
+    }
+  
+    /*---------LADO DERECHO----------*/
+    #contenedor-derecha-letrero{
+      font-family: 'Bellota Text', sans-serif; /* Aplicamos la fuente "Bellota Text" */
+      text-align: center; /* Alineamos el texto al centro horizontalmente */
+      font-size: 1.5em; /* Tamaño del texto*/
+      color: #020202; /* Color para el texto */
+      letter-spacing: 0.125em; /* Espaciado entre letras*/
+    }
+    
+  /*---------------RESPONSIVIDAD-----------------*/
+  /*--RESPONSIVIDAD ICON-LINE-LETRERO*/
+  @media (max-width: 480px) {
+      #icon-line-letrero {
+        font-size: 1.2em; /* Tamaño de fuente reducido para pantallas pequeñas */
+        letter-spacing: 0.1em; /* Menos espaciado entre letras */
+        padding: 0.5em 1em; /* Agregar espaciado interno para mayor comodidad */
+        margin-bottom: 1em; /* Margen inferior para separar del contenido inferior */
+      }
+    }
+    
+    /*---- Responsividad para pantallas medianas (481px a 768px) ----*/
+    @media (min-width: 481px) and (max-width: 768px) {
+      #icon-line-letrero {
+        font-size: 1.4em; /* Ajuste del tamaño de fuente para pantallas medianas */
+        letter-spacing: 0.11em; /* Espaciado ligeramente reducido */
+        padding: 0.75em 1.2em; /* Ajuste del padding para pantallas medianas */
+      }
+    }
+  
+     /*---RESPONSIVIDAD ELEMENTOS----*/
+  /*---- Responsividad para pantallas pequeñas (hasta 480px) ----*/
+    @media (max-width: 480px) {
+    #contenedor-izquierda-letrero {
+      font-size: 1.2em; /* Tamaño de fuente reducido para pantallas pequeñas */
+      letter-spacing: 0.1em; /* Espaciado entre letras ligeramente menor */
+      padding: 0.5em; /* Espaciado interno para comodidad en pantallas pequeñas */
+      
+    }
+    .ubicacion {
+        margin-top: 5%; /* Reduce el margen superior para pantallas pequeñas */
+        margin-left: 10%; /* Reduce el margen izquierdo para pantallas pequeñas */
+      }
+    
+      #boton-ubicacion {
+        padding: 0.2em 0.9em; /* Menos padding para pantallas pequeñas */
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+      }
+    
+      #imagen-linea {
+        width: 10rem; /* Ancho reducido para pantallas pequeñas */
+        margin-inline: 25%; /* Ajusta el margen horizontal */
+      }
+  }
+  
+  /*---- Responsividad para pantallas medianas (481px a 768px) ----*/
+  @media (min-width: 481px) and (max-width: 768px) {
+    #contenedor-izquierda-letrero {
+      font-size: 1.2em; /* Tamaño de fuente para pantallas medianas */
+      letter-spacing: 0.11em; /* Espaciado entre letras ajustado para pantallas medianas */
+      padding: 0.75em; /* Espaciado interno para mayor comodidad */
+      margin-left: 22%;
+    }
+    #contenedor-derecha-letrero{
+      font-size: 1.2em; /* Tamaño de fuente para pantallas medianas */
+      letter-spacing: 0.11em; /* Espaciado entre letras ajustado para pantallas medianas */
+      padding: 0.75em; /* Espaciado interno para mayor comodidad */
+      
+    }
+    .ubicacion {
+        margin-top: 7%; /* Ajusta el margen superior para pantallas medianas */
+        margin-left: 20%; /* Ajusta el margen izquierdo */
+      }
+    
+      #boton-ubicacion {
+        padding: 0.25em 1.1em; /* Ajusta el padding */
+        font-size: 0.95rem; /* Ajusta el tamaño de la fuente */
+      }
+    
+      #imagen-linea {
+        width: 11rem; /* Ancho ajustado para pantallas medianas */
+        margin-inline: 28%; /* Ajusta el margen horizontal */
+      }
+  }

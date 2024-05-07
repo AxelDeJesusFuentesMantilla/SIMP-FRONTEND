@@ -1,5 +1,5 @@
 /* nav-bar.component.css */
-.nav-bar {
+.nav-bar-infraccion8 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,11 +24,7 @@
   justify-content: flex-end; /* Alinea el temporizador y el menú a la derecha */
   /* Se remueve el margin-left del icono para evitar empujarlo más de la cuenta */
 }
-<<<<<<< Updated upstream
-
-=======
 /*INICIA FUNCIONALIDAD DE MENÚ*/
->>>>>>> Stashed changes
 .logo, .title-image {
   height: 4rem; /* Asegura un tamaño consistente para las imágenes */
 }
@@ -39,8 +35,6 @@
   /* margin-right se puede mantener si quieres separación adicional del borde */
 }
 
-<<<<<<< Updated upstream
-=======
 /* nav-bar.component.css */
 .icon:hover {
   transform: scale(1.2); /* Agrandar la imagen un 10% */
@@ -96,7 +90,6 @@
 }
 
 /*TERMINA FUNCIONALIDAD DE MENÚ*/
->>>>>>> Stashed changes
 .banda-inf{
   width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
   height: 1.3rem;

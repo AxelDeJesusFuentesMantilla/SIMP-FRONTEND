@@ -1,23 +1,13 @@
-<<<<<<< Updated upstream
-import { Component,Input } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; // Importar Router
 import { CountdownTimerService } from '../countdown-timer/countdown-timer.service';
->>>>>>> Stashed changes
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  selector: 'app-nav-bar-infraccion8',
+  templateUrl: './nav-bar-infraccion8.component.html',
+  styleUrls: ['./nav-bar-infraccion8.component.css']
 })
-<<<<<<< Updated upstream
-export class NavBarComponent {
-  // Cualquier lógica adicional para la barra de navegación
-  @Input() showTimer: boolean = true; // Propiedad de entrada para mostrar el temporizador
-}
-=======
-export class NavBarComponent implements OnInit {
+export class NavBarInfraccion8Component implements OnInit {
   isMenuVisible: boolean = false;
   remainingTime: string = '';
 
@@ -44,4 +34,3 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['/busqueda-lograda']); // Asegúrate de que la ruta '/inicio' esté definida en tu módulo de rutas
   }
 }
->>>>>>> Stashed changes
