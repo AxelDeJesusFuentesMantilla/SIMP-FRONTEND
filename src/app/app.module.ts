@@ -21,6 +21,7 @@ import { SearchComponent } from './pages/ingreso-de-placas/search/search.compone
 import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
 
 import { BotonesComponent } from './components/botones/botones.component';
+import { Infraccion4Component } from './infraccion4/infraccion4.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BotonesComponent } from './components/botones/botones.component';
     SearchComponent,
     FormComponent,
     BotonesComponent,
-    Infraccion9Component
+    Infraccion9Component,
+    Infraccion4Component
   ],
   imports: [
     BrowserModule,
