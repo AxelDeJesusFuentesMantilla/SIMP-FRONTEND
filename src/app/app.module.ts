@@ -22,6 +22,7 @@ import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
 
 import { BotonesComponent } from './components/botones/botones.component';
 import { Infraccion4Component } from './infraccion4/infraccion4.component';
+import { VentanaPopUpComponent } from './components/ventana-pop-up/ventana-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { Infraccion4Component } from './infraccion4/infraccion4.component';
     FormComponent,
     BotonesComponent,
     Infraccion9Component,
-    Infraccion4Component
+    Infraccion4Component,
+    VentanaPopUpComponent
   ],
   imports: [
     BrowserModule,

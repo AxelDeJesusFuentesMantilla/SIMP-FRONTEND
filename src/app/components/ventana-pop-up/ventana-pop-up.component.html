@@ -1,32 +1,38 @@
-<head><link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet"></head>
-
 <!-- Componente de tarjeta que abre el pop-up al hacer clic -->
 <div class="image-card" role="button" (click)="togglePopup()">
   <!-- Contenido de la tarjeta: imagen con atributos mejorados -->
-  <img
-    src="assets/icons/card.png"
-    alt="Añadir fotos"
-    aria-label="Añadir fotos"
-  />
+  <img src="assets/icons/card.png" alt="Añadir fotos" aria-label="Añadir fotos"/>
 </div>
-
-<!-- Pop-up que aparece cuando `isPopupVisible` es verdadero -->
+<app-nav-bar></app-nav-bar>
 <div class="overlay" *ngIf="isPopupVisible">
-  <!-- Contenedor del pop-up con estilo de enfoque tipo glass -->
   <div class="popup">
-    <!-- Cabecera del pop-up -->
-    <div class="popup-header">
-      <!-- Botón para cerrar el pop-up, usando `togglePopup()` -->
-      <button class="close-button" (click)="togglePopup()" aria-label="Cerrar">X</button>
-    </div>
-    <!-- Título del pop-up -->
-    <h2>¿Qué desea hacer?</h2>
-    <!-- Botones de acción -->
+    <button class="close-button" (click)="togglePopup()" aria-label="Cerrar">X</button>
+    <h2>CARGA Y SUS MANIOBRAS</h2>
+    <form>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="sinPermiso" />
+          <img src="assets/images/permiso.png" alt="Sin Permiso" class="checkbox-icon">
+          Sin permiso
+        </label>
+      </div>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="impedirVisibilidad" />
+          <img src="assets/images/ojo.png" alt="Impedir Visibilidad" class="checkbox-icon">
+          Impedir visibilidad
+        </label>
+      </div>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="sinLona" />
+          <img src="assets/images/camioneta.png" alt="Sin Lona" class="checkbox-icon">
+          Sin lona
+        </label>
+      </div>
+    </form>
     <div class="popup-buttons">
-      <!-- Botón para tomar una foto -->
-      <button (click)="takePhoto()">Tomar Foto</button>
-      <!-- Botón para elegir una imagen de la galería -->
-      <button (click)="chooseFromGallery()">Elegir de Galería</button>
+      <button (click)="back()">Atras</button>
     </div>
   </div>
 </div>

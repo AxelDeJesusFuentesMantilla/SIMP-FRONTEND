@@ -12,11 +12,9 @@ export class VentanaPopUpComponent {
     this.isPopupVisible = !this.isPopupVisible;
   }
 
-  takePhoto() {
-    // Lógica para tomar la foto
+  back() {
+    // Lógica para regresar atras
   }
 
-  chooseFromGallery() {
-    // Lógica para elegir una foto de la galería
-  }
+
 }

@@ -31,25 +31,26 @@ export class Infraccion9Component {
     // Cuerpo del documento
     doc.setFontSize(10);
     doc.text('CONTRIBUYENTE:', 20, 45);
-    doc.text('FUENTES MANTILLA AXEL DE JESUS', 70, 45);
+    doc.text('FUENTES MANTILLA AXEL DE JESUS', 55, 45);
     doc.text('DOMICILIO DEL CONTRIBUYENTE:', 20, 50);
-    doc.text('Calle desconocida #1234', 70, 50);
+    doc.text('Calle desconocida #1234', 80, 50);
 
     // Detalles de pago
     doc.text('CONCEPTOS', 20, 60);
-    doc.text('IMPORTE', 150, 60, { align: 'right' });
+    doc.text('IMPORTE', 170, 60, { align: 'right' });
     doc.text('MULTAS VARIAS', 20, 65);
-    doc.text('$1,485.00', 150, 65, { align: 'right' });
+    doc.text('$1,485.00', 170, 65, { align: 'right' });
     doc.text('DERECHOS DE LICENCIA', 20, 70);
-    doc.text('$412.00', 150, 70, { align: 'right' });
+    doc.text('$412.00', 170, 70, { align: 'right' });
     doc.text('OTROS APROVECHAMIENTOS', 20, 75);
-    doc.text('$3.40', 150, 75, { align: 'right' });
+    doc.text('$3.40', 170, 75, { align: 'right' });
 
     // Total
     doc.setFont('helvetica', 'bold');
     doc.text('TOTAL:', 140, 85);
-    doc.text('$1,900.40', 150, 85, { align: 'right' });
+    doc.text('$1,900.40', 170, 85, { align: 'right' });
 
+    
     // Pie de página
     doc.setFontSize(10);
     doc.setFont('helvetica', 'italic');
