@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: 'resumen-infraccion', component: Infraccion9Component },
   { path: 'infraccion-fotos', component: InfraccionFotosComponent },
   { path: 'busqueda-lograda', component: BusquedaLogradaComponent },
+  { path: 'busqueda-incorrecta', component: BusquedaIncorrectaComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];

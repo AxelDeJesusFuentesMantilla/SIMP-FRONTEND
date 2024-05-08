@@ -1,7 +1,6 @@
-// countdown-timer.component.ts
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
-import { startWith, takeWhile } from 'rxjs/operators';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { CountdownTimerService } from './countdown-timer.service';
 
 @Component({
   selector: 'app-countdown-timer',
@@ -9,38 +8,25 @@ import { startWith, takeWhile } from 'rxjs/operators';
   styleUrls: ['./countdown-timer.component.css']
 })
 export class CountdownTimerComponent implements OnInit, OnDestroy {
-  private subscription!: Subscription;
-  public timeLeft: number = 300; // tiempo inicial en segundos (5 minutos)
-  public displayTime: string='';
-  public progress: number = 100; // Inicia la barra de progreso al 100%
+  subscription!: Subscription;
+  timeLeft!: number;
+  progress: number = 100;
+
+  constructor(private timerService: CountdownTimerService) {}
 
   ngOnInit() {
-    this.startCountdown();
-  }
-
-  startCountdown() {
-    const initialTime = this.timeLeft;
-
-    this.subscription = interval(1000)
-      .pipe(
-        startWith(0),
-        takeWhile(() => this.timeLeft > 0)
-      )
-      .subscribe(() => {
-        this.timeLeft -= 1;
-        this.displayTime = this.formatTime(this.timeLeft);
-        this.progress = (this.timeLeft / initialTime) * 100;
-      });
-  }
-
-  formatTime(time: number): string {
-    const hours: number = Math.floor(time / 3600);
-    const minutes: number = Math.floor((time % 3600) / 60);
-    const seconds: number = time % 60;
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    // Se suscribe al observable que informa el tiempo restante
+    this.subscription = this.timerService.getTimeLeft().subscribe(time => {
+      this.timeLeft = time;
+      // Actualiza la barra de progreso basada en el tiempo original (300 segundos)
+      this.progress = (time / 300) * 100;
+    });
+    // Inicia el temporizador al cargar el componente
+    this.timerService.startCountdown();
   }
 
   ngOnDestroy() {
+    // Asegúrate de desuscribirte para evitar fugas de memoria
     if (this.subscription) {
       this.subscription.unsubscribe();
     }

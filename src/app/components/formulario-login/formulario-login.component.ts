@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../../auth.service'; // Asegúrate de importar el servicio correctamente
 @Component({
   selector: 'app-formulario-login',
   templateUrl: './formulario-login.component.html',
@@ -10,7 +10,11 @@ import { Router } from '@angular/router';
 export class FormularioLoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder,private route: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required]]
@@ -19,14 +23,16 @@ export class FormularioLoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      // Handle login logic here
-      console.log('Form Values', this.loginForm.value);
+      const { username, password } = this.loginForm.value;
+      this.authService.login(username, password).subscribe({
+        next: (response) => {
+          this.authService.handleAuthentication(response.token, response.tipo_usuario);
+        },
+        error: (err) => {
+          console.error('Error during login:', err);
+          alert('Authentication failed!'); // Mejor manejo de errores y mensajes de usuario en producción
+        }
+      });
     }
   }
-
-  irAPagina(titulo: string):void{
-    this.route.navigate([titulo]);
-
-  }
-
 }

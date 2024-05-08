@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms'; // Asegúrate de incluir ReactiveFormsModule aquí
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; // Asegúrate de importar HttpClientModule aquí
 
 import { AppComponent } from './app.component';
 import { FondoLoginComponent } from './components/fondo-login/fondo-login.component';
@@ -97,6 +99,8 @@ import { HistorialComponent } from './pages/historial/historial.component';
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot([]),
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
