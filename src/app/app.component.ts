@@ -1,3 +1,4 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SIMP-FRONTEND';
+  section: 'category' | 'manual' | null = null;
+
+  showSection(section: 'category' | 'manual'): void {
+    this.section = section;
+  }
 }
