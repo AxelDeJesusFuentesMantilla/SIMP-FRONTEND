@@ -1,0 +1,90 @@
+.app {
+    padding-top: 70px; /* Ajusta este valor según sea necesario */
+    font-family: 'Arial', sans-serif; /* Asegúrate de aplicar la familia de fuentes aquí si es necesario */
+  }
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #011D4D;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Ajusta la posición según sea necesario */
+    left: 0;
+    right: 0;
+    height: 10px; /* Altura de los cuadros */
+    background-image: 
+      repeating-linear-gradient(
+        to right,
+        white, white 10px, /* cuadro blanco */
+        grey 10px, grey 20px, /* cuadro gris */
+        rgb(224, 245, 150) 20px, rgb(224, 245, 150) 30px, /* cuadro verde */
+        white 30px, white 40px, /* cuadro blanco */
+        grey 40px, grey 50px, /* cuadro gris */
+        rgb(224, 245, 150) 50px, rgb(224, 245, 150) 60px /* cuadro verde */
+      );
+    background-size: 60px 10px; /* Ajusta el tamaño del patrón */
+  }
+  
+  :host {
+    display: block;
+    font-family: 'Arial', sans-serif;
+  }
+
+  
+.filter-option {
+  text-align: center;
+  padding: 2em 0; /* Unidad em basada en el tamaño de fuente actual */
+}
+
+.Movilia {
+    float: center; /* Alinea el logo hacia la derecha */
+    margin-left: 35%; /* Espacio adicional a la derecha para separar del resto de los elementos */
+}
+
+.filter-option button {
+  margin: 0 15px;
+  padding: 15px 30px;
+  background-color: #0056b3; /* Color de fondo para los botones */
+  color: white; /* Color del texto */
+  font-size: 1em; /* Tamaño de fuente relativo */
+  border: none; /* Eliminar bordes */
+  border-radius: 25px; /* Bordes redondeados para los botones */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para los botones */
+  cursor: pointer; /* Cursor de puntero para indicar que es clickeable */
+  transition: all 0.3s ease; /* Transición suave para interacciones */
+  text-transform: uppercase; /* Texto en mayúsculas para mayor énfasis */
+  font-weight: bold; /* Negrita para el texto */
+}
+
+.filter-option button:hover {
+  background-color: #003366; /* Color al pasar el ratón por encima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.filter-option button:active {
+  background-color: #002244; /* Color al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset; /* Sombra interior para efecto de pulsación */
+}
+
+/* Estilos para asegurarse de que los botones no estén demasiado juntos en pantallas pequeñas */
+@media (max-width: 768px) {
+  .filter-option {
+    padding: 1em 0; /* Menos espacio vertical en dispositivos móviles */
+  }
+  
+  .filter-option button {
+    margin: 10px; /* Menos margen horizontal */
+    padding: 10px 20px; /* Menos relleno */
+  }
+}

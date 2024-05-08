@@ -1,0 +1,39 @@
+<!-- src/app/manual-entry/manual-entry.component.html -->
+<div class="manual-entry">
+    <form [formGroup]="manualEntryForm" (ngSubmit)="onSubmit()">
+      <div class="form-item">
+        <label for="article">Artículo</label>
+        <select formControlName="article" (change)="onArticleChange()">
+          <option value="">Seleccione un Artículo...</option>
+          <option *ngFor="let article of availableArticles" [value]="article">{{ article }}</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="fraction">Fracción</label>
+        <select formControlName="fraction" (change)="onFractionChange()">
+          <option value="">Seleccione una Fracción...</option>
+          <option *ngFor="let fraction of availableFractions" [value]="fraction.nombre">{{ fraction.nombre }}</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="incise">Inciso</label>
+        <select formControlName="incise">
+          <option value="">Seleccione un Inciso...</option>
+          <option *ngFor="let incise of availableIncises" [value]="incise">{{ incise }}</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="reason">Motivo</label>
+        <input type="text" formControlName="reason" placeholder="Motivo">
+      </div>
+      <button type="submit" [disabled]="!manualEntryForm.valid">Registrar Infracción</button>
+    </form>
+    <div *ngIf="submittedData">
+        <p><strong>Resultado del Formulario:</strong></p>
+        <p>Artículo: {{ submittedData.article }}</p>
+        <p>Fracción: {{ submittedData.fraction }}</p>
+        <p>Inciso: {{ submittedData.incise }}</p>
+        <p>Motivo: {{ submittedData.reason }}</p>
+      </div>
+  </div>
+  

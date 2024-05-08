@@ -1,0 +1,36 @@
+<!-- src/app/category-selection/category-selection.component.html -->
+<div class="category-selection-container">
+    <h2>SELECCIONA UNA CATEGORÍA</h2>
+    
+    <!-- Categoría Selector -->
+    <div class="form-group">
+      <label for="categoriaSelect">Control vehicular:</label>
+      <select id="categoriaSelect" class="form-control" [(ngModel)]="selectedCategoria" (change)="onCategoriaChange(selectedCategoria)">
+        <option value="">-- Seleccionar --</option>
+        <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+      </select>
+    </div>
+    
+    <!-- Infracción Selector -->
+    <div class="form-group" *ngIf="selectedCategoria">
+      <label for="infraccionSelect">Seleccione una infracción:</label>
+      <select id="infraccionSelect" class="form-control" [(ngModel)]="selectedInfraccion">
+        <option value="">-- Seleccionar --</option>
+        <option *ngFor="let infraccion of infracciones" [ngValue]="infraccion">{{ infraccion.nombre }}</option>
+      </select>
+    </div>
+    
+    <!-- Botón de registro -->
+    <div class="register-infraccion" *ngIf="selectedInfraccion">
+      <button class="btn btn-primary" (click)="registrarInfraccion()">Registrar Infracción</button>
+    </div>
+    
+    <!-- Detalles de infracción -->
+    <div class="infraccion-details" *ngIf="showInfraccionDetails">
+      <h3>Detalles de la infracción seleccionada:</h3>
+      <p><strong>Artículo:</strong> {{ selectedInfraccion.articulo }}</p>
+      <p><strong>Fracción:</strong> {{ selectedInfraccion.fraccion }}</p>
+      <p><strong>Inciso:</strong> {{ selectedInfraccion.inciso || 'N/A' }}</p>
+    </div>
+  </div>
+  
