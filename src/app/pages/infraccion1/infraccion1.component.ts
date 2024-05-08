@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-registro1',
-  templateUrl: './registro1.component.html',
-  styleUrls: ['./registro1.component.scss']
+  templateUrl: './infraccion1.component.html',
+  styleUrls: ['./infraccion1.component.css']
 })
-export class Registro1Component { 
-  constructor(private route: Router) { }
+export class Infraccion1Component { 
+  constructor(private router: Router) { }
 
   goToNextPage() {
     // Asume que tienes una ruta configurada en tu módulo de enrutamiento para 'next-page'
-    this.route.navigate(['/app.component.html']); // Cambia '/next-page' por la ruta real que quieras usar
+    this.router.navigate(['/app.component.html']); // Cambia '/next-page' por la ruta real que quieras usar
   }
   
    mexicanStates: string[] = [
@@ -59,13 +59,4 @@ export class Registro1Component {
     this.selectedColor = color;
     this.isModalOpen = false; // presumiblemente quieres cerrar el modal cuando un color es seleccionado
   }
-
-  irAPagina(titulo: string):void{
-    this.route.navigate([titulo]);
-
-  }
-}
-
-export class registro1{
-  
 }

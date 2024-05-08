@@ -1,97 +1,113 @@
+/*----- BOTÓN LADO IZQUIERDO/RETROCEDER -----*/
 .boton {
-  position: fixed;
-  left: 0;
-  bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
-  top: calc(
-    40vh + 40px
-  ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed; /* Manténemos el botón fijo en la pantalla */
+  left:0; /* Ubicación en el lado izquierdo */
+  bottom: 1.25rem; /* Usamos  'bottom' para mantener una posición constante */
+ 
+  
 }
 
 .boton img {
-  width: 15vw; /* Ajusta el tamaño de la imagen según sea necesario */
-  height: 30vh; /* Permite que la altura se ajuste automáticamente según el ancho */
-  cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
-  transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
-  margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
+  /* Tamaño del ícono del botón */
+  width: 6.5rem; /* Ancho */
+  height: auto; /* Mantiene la proporción de aspecto */
+  cursor: pointer; /* Indicamos que es interactivo */
+  transition: transform 0.3s ease;/* Transición suave para efecto hover */
 }
 
 .boton img:hover {
-  transform: scale(
-    1.1
-  ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+  transform: scale(1.1);/* Efecto de escala al pasar el mouse */
 }
 
+/*----- BOTÓN LADO DERECHO/CONTINUAR -----*/
 .Boton {
-  position: fixed;
-  right: 0;
-  bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
-  top: calc(
-    40vh + 40px
-  ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed; /* Manténemos el botón fijo en la pantalla */
+  right: 0; /* Ubicación en el lado derecho */
+  bottom: 1.25rem; /* Usamos  'bottom' para mantener una posición constante */
+  
+
 }
 
 .Boton img {
-  width: 15vw; /* Ajusta el tamaño de la imagen según sea necesario */
-  height: 30vh; /* Permite que la altura se ajuste automáticamente según el ancho */
-  cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
-  transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
-  margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
+  /* Tamaño del ícono del botón */
+  width: 5.5rem; 
+  height: auto; /* Mantiene la proporción de aspecto */
+  cursor: pointer;
+  margin-top: -2.6875rem; /* Ajustamos la posición para alinearse con el otro botón */
+  transition: transform 0.3s ease; /* Transición suave para efecto hover */
 }
 
 .Boton img:hover {
-  transform: scale(
-    1.1
-  ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
+  transform: scale(1.1); /* Efecto de escala al pasar el mouse */
 }
 
-@media (min-width: 992px) {
-  .boton {
-    position: fixed;
-    left: 0;
-    bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
-    top: calc(
-      40vh + 40px
-    ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  }
+/* ----- RESPONSIVIDAD ----- */
+  @media (max-width: 480px) {
+    .boton {
+      position: fixed;
+      right: 0; /* Botón pegado al borde derecho */
+      bottom: 1rem; /* Más espacio desde la parte inferior para pantallas pequeñas */
+      
+      
+    }
 
-  .boton img {
-    width: 10vw; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 50vh; /* Permite que la altura se ajuste automáticamente según el ancho */
-    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
-    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
-    margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
-  }
+    .boton img {
+        width: 6.7rem; /* Ajuste de tamaño para pantallas más pequeñas */
+        
+    }
 
-  .boton img:hover {
-    transform: scale(
-      1.1
-    ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
-  }
+    .Boton {
+        bottom: 0.5rem; /* Menos espacio para pantallas más pequeñas */
+    }
 
-  .Boton {
-    position: fixed;
-    right: 0;
-    bottom: 20vh; /* Ajusta la distancia desde la parte inferior de la pantalla */
-    top: calc(
-      40vh + 40px
-    ); /* Alinea el botón a la mitad de la altura de la ventana más la distancia del botón "Elegir Ubicación" */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  }
+    .Boton img {
+        width: 5.5rem; /* Ajuste de tamaño para pantallas más pequeñas */
+       
+    }
+}
 
-  .Boton img {
-    width: 10vw; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 50vh; /* Permite que la altura se ajuste automáticamente según el ancho */
-    cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es un botón */
-    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
-    margin-top: -43px; /* Ajusta la posición vertical para que esté alineado con el otro botón */
-  }
+@media (min-width: 481px) and (max-width: 768px) {
+    .boton {
+      position: fixed;
+      right: 0; /* Botón pegado al borde derecho */
+      bottom: 8rem; /* Ajuste de espacio para pantallas medianas */
+        
+    }
 
-  .Boton img:hover {
-    transform: scale(
-      1.1
-    ); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse por encima */
-  }
+    .boton img {
+        width: 2.9rem; /* Ajuste de tamaño para pantallas medianas */
+    }
+
+    .Boton {
+        bottom: 1rem; /* Ajuste de espacio para pantallas medianas */
+    }
+
+    .Boton img {
+      position: fixed;
+      right: 0; /* Botón pegado al borde derecho */
+      bottom: 8rem; /* Ajuste de espacio para pantallas medianas */
+      width: 2.5rem; /* Ajuste de tamaño para pantallas medianas */
+      
+        
+    }
+}
+
+@media (min-width: 769px) {
+    .boton {
+        bottom: 1.25rem; /* Ajuste de espacio para pantallas grandes */
+    }
+
+    .boton img {
+        width: 6.5rem; /* Tamaño del botón para pantallas grandes */
+     
+    }
+
+    .Boton {
+        bottom: 1.25rem; /* Ajuste de espacio para pantallas grandes */
+       
+    }
+
+    .Boton img {
+        width: 5.3rem; /* Tamaño del botón para pantallas grandes */
+    }
 }

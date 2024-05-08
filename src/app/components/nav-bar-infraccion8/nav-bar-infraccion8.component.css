@@ -1,5 +1,5 @@
 /* nav-bar.component.css */
-.nav-bar {
+.nav-bar-infraccion8 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,6 @@
   justify-content: flex-end; /* Alinea el temporizador y el menú a la derecha */
   /* Se remueve el margin-left del icono para evitar empujarlo más de la cuenta */
 }
-
 /*INICIA FUNCIONALIDAD DE MENÚ*/
 .logo, .title-image {
   height: 4rem; /* Asegura un tamaño consistente para las imágenes */

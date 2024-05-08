@@ -24,10 +24,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CountdownTimerComponent } from './components/countdown-timer/countdown-timer.component';
 import { FormComponent } from './pages/ingreso-de-placas/form/form.component';
 //Imports para el ingreso de infraccion
-import { Registro1Component } from './pages/registro1/registro1.component';
+import { Infraccion1Component } from './pages/infraccion1/infraccion1.component';
 import { ColorPickerModalComponent } from './components/color-picker-modal/color-picker-modal.component';
 //Imports para Interfaz InfraccionFotos
-import { InfraccionFotosComponent } from './pages/infraccion-fotos/infraccion-fotos.component';
 import { BotonesComponent } from './components/botones/botones.component';
 import { TriangulosFondoLoginComponent } from './components/triangulos-fondo-login/triangulos-fondo-login.component';
 import { Infraccion2FormularioComponent } from './components/infraccion2-formulario/infraccion2-formulario.component';
@@ -46,10 +45,8 @@ import { Infraccion9Component } from './pages/infraccion9/infraccion9.component'
 import { BotonesLateralesComponent } from './components/botones-laterales/botones-laterales.component';
 import { Infraccion8Component } from './pages/infraccion8/infraccion8.component'; 
 import { IconLineContainerComponent } from './components/icon-line-container/icon-line-container.component';
-import { LetreroSuperiorComponent } from './components/letrero-superior/letrero-superior.component';
-import { BotonElegirUbicacionComponent } from './components/boton-elegir-ubicacion/boton-elegir-ubicacion.component';
-import { EtiquetaContenidoComponent } from './components/etiqueta-contenido/etiqueta-contenido.component';
-import { LineaHorizontalComponent } from './components/linea-horizontal/linea-horizontal.component';
+
+
 import { VentanaPopUpComponent } from './components/ventana-pop-up/ventana-pop-up.component';
 import { HistorialComponent } from './pages/historial/historial.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
@@ -57,6 +54,9 @@ import { ConsultaInicioComponent } from './pages/consulta-inicio/consulta-inicio
 import { ConsultaFiltroComponent } from './components/consulta-filtro/consulta-filtro.component';
 import { ConsultaTablaInfraccionesComponent } from './components/consulta-tabla-infracciones/consulta-tabla-infracciones.component';
 import { ConsultaLabelComponent } from './components/consulta-label/consulta-label.component';
+import { NavBarInfraccion8Component } from './components/nav-bar-infraccion8/nav-bar-infraccion8.component';
+import { PerfilVehicularRegistradoComponent } from './pages/perfil-vehicular-registrado/perfil-vehicular-registrado.component';
+import { Infraccion6Component } from './pages/infraccion6/infraccion6.component';
 
 
 @NgModule({
@@ -72,9 +72,8 @@ import { ConsultaLabelComponent } from './components/consulta-label/consulta-lab
     CountdownTimerComponent,
     BusquedaLogradaComponent,
     FormComponent,
-    Registro1Component,
+    Infraccion1Component,
     ColorPickerModalComponent,
-    InfraccionFotosComponent,
     BotonesComponent,
     TriangulosFondoLoginComponent,
     Infraccion2FormularioComponent,
@@ -86,18 +85,12 @@ import { ConsultaLabelComponent } from './components/consulta-label/consulta-lab
     PerfilVeicularComponent,
     Infraccion9Component,
     SearchComponent,
-    NavBarComponent,
     MainContentComponent,
-    CountdownTimerComponent,
     BusquedaLogradaComponent,
     FormComponent,
     BotonesLateralesComponent,
     Infraccion8Component,
     IconLineContainerComponent,
-    LetreroSuperiorComponent,
-    BotonElegirUbicacionComponent,
-    EtiquetaContenidoComponent,
-    LineaHorizontalComponent,
     VentanaPopUpComponent,
     HistorialComponent,
     SidenavComponent,
@@ -105,6 +98,9 @@ import { ConsultaLabelComponent } from './components/consulta-label/consulta-lab
     ConsultaFiltroComponent,
     ConsultaTablaInfraccionesComponent,
     ConsultaLabelComponent,
+    NavBarInfraccion8Component,
+    Infraccion6Component,
+    PerfilVehicularRegistradoComponent,
 
   ],
   imports: [

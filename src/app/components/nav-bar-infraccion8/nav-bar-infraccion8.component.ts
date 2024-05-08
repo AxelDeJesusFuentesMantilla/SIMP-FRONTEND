@@ -3,11 +3,11 @@ import { Router } from '@angular/router'; // Importar Router
 import { CountdownTimerService } from '../countdown-timer/countdown-timer.service';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  selector: 'app-nav-bar-infraccion8',
+  templateUrl: './nav-bar-infraccion8.component.html',
+  styleUrls: ['./nav-bar-infraccion8.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarInfraccion8Component implements OnInit {
   isMenuVisible: boolean = false;
   remainingTime: string = '';
 

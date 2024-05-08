@@ -1,12 +1,17 @@
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img width="60" alt="Logo" src="assets/images/logo1.png" />
-  <img width="60" alt="Logo policia" src="assets/images/policia.svg" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infraccion11</title>
+  <link rel="stylesheet" href="infraccion1.component.css">
+</head>
+<body>
 
-  <div class="spacer"></div>
-</div>
+  <!-- Navbar al principio -->
+  <app-nav-bar></app-nav-bar>
 
-<div class="content">
+  <!-- Línea de iconos después -->
   <div class="icon-line-container">
     <img
       src="assets/images/iconPatrulla.png"
@@ -27,11 +32,10 @@
     />
   </div>
 
-  <!-- Formulario  -->
+  <!-- El resto del contenido después de la icon-line -->
   <div class="content">
-    <!-- Iconos y línea de puntos aquí... -->
 
-    <!-- Formulario -->
+    <!-- Título y formulario -->
     <h1>¡Comencemos!</h1>
     <form class="vehicle-form">
       <div class="form-column">
@@ -45,12 +49,11 @@
           />
         </div>
         <div class="form-group state">
-          <label for="state">Estado:</label>
+          <label para="state">Estado:</label>
           <select id="state" name="state">
             <option *ngFor="let state of mexicanStates" [value]="state">
               {{ state }}
             </option>
-            <!-- Agrega las opciones de estados aquí -->
           </select>
         </div>
         <div class="form-group color">
@@ -66,38 +69,37 @@
           ></app-color-picker-modal>
         </div>
       </div>
+
       <div class="form-column">
         <!-- Elementos de la columna derecha -->
         <div class="form-group brand">
-          <!-- Agrega los controles de Marca aquí -->
-
-          <label for="brand">Marca:</label>
+          <label para="brand">Marca:</label>
           <select id="brand">
             <option value="">Seleccionar --</option>
             <!-- Opciones de marcas de coches -->
           </select>
         </div>
         <div class="form-group model">
-          <!-- Agrega los controles de Modelo aquí -->
-
-          <label for="model">Modelo:</label>
+          <label para="model">Modelo:</label>
           <select id="model">
             <option value="">Seleccionar --</option>
             <!-- Opciones de modelo -->
           </select>
         </div>
         <div class="form-group year">
-          <!-- Agrega los controles de Año aquí -->
-
-          <label for="year">Año:</label>
+          <label para="year">Año:</label>
           <select id="year">
             <option value="">Seleccionar --</option>
-            <!-- Opciones de año -->
+            <!-- Opciones de años -->
           </select>
         </div>
       </div>
     </form>
-  </div>
-    <app-botones></app-botones>
+    
+    <!-- Otros componentes o elementos adicionales -->
+    <app-botones-laterales></app-botones-laterales>
+
   </div>
 
+</body>
+</html>
