@@ -35,41 +35,64 @@
     color: #020202; /* Color para el texto */
     letter-spacing: 0.125em; /* Espaciado entre letras*/
   }
-  .ubicacion{
-    display: flex; /* Configura el contenedor como Flexbox */
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: flex-start; /* Alinea horizontalmente al inicio */
-    margin-top: 10%;
-    margin-left: 30%;
-    margin-bottom: 20%;
-    gap: 0.125rem;
+  .ubicacion {
+    display: flex;
+    flex-direction: column; /* Disposición vertical para alinear elementos en la columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    margin-top: 10%; /* Margen superior del contenedor principal */
+    margin-left: 30%; /* Margen izquierdo */
+    margin-bottom: 20%; /* Margen inferior */
   }
-  #icono-ubicacion{
-    width:2.5rem ;
+  
+  .barra-ubicacion {
+    display: flex; /* Alinea el icono y el botón en la misma línea */
+    align-items: center; /* Alineación vertical al centro */
+    gap: 0.125rem; /* Espacio entre el icono y el botón */
   }
-  #boton-ubicacion{
-    font-family: 'ABeeZee', sans-serif; /* Aplicamos la fuente*/
-    color: #fff; /*color del texto del botón*/
-    border: 0.125rem solid #011D4D; /* Borde del botón*/
-    background-color: #011D4D; /* Color de fondo del botón */
-    border-radius: 0.4em; /* Bordes redondeados para suavizar el botón */
-    padding: 0.3em 1.3em; /* Espaciado interno horizontal y vertical */
-    transition: all 0.2s ease-in-out; /* Transición suave para cambios */
-    font-size: 1rem; /* Tamaño de fuente relativa, aproximadamente 16px */
-
+  
+  #icono-ubicacion {
+    width: 2.5rem; /* Ancho del icono */
   }
+  
+  #boton-ubicacion {
+    font-family: 'ABeeZee', sans-serif; /* Fuente del botón */
+    color: #fff; /* Color del texto del botón */
+    border: 0.125rem solid #011D4D; /* Borde del botón */
+    background-color: #011D4D; /* Fondo del botón */
+    border-radius: 0.4em; /* Bordes redondeados */
+    padding: 0.3em 1.3em; /* Espaciado interno */
+    transition: all 0.2s ease-in-out; /* Efectos de transición */
+    font-size: 1rem; /* Tamaño de fuente */
+  }
+  
   #boton-ubicacion:hover {
-    color: #fff;
-    background-color: #0c3170; /* Cambia el color de fondo al pasar el mouse */
-    transform: scale(1.05); /* Efecto de escala para hacer el botón un poco más grande */
-    border: 0.125rem solid #0c3170; /* Cambia el color del borde para coincidir con el nuevo fondo */
+    color: #fff; /* Color del texto en hover */
+    background-color: #0c3170; /* Fondo en hover */
+    transform: scale(1.05); /* Efecto de escala en hover */
+    border: 0.125rem solid #0c3170; /* Borde en hover */
   }
-
-  #imagen-linea{
-    width: 12.5rem;
-    height: 1.5625rem;
-    margin-inline: 33%;
+  
+  #contenedor-direccion {
+    display: flex;
+    flex-direction: column; /* Disposición vertical para el contenedor de dirección */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding: 0.625rem; /* Espaciado interno */
+    background-color: #f0f0f0; /* Color de fondo del contenedor de dirección */
+    border-radius: 0.3125rem; /* Bordes redondeados */
+    margin-top: 0.625rem; /* Margen superior */
   }
+  
+  .linea-horizontal {
+    text-align: center; /* Alineación centrada */
+    margin-top: 1rem; /* Margen entre el contenedor de dirección y la línea horizontal */
+  }
+  
+  #imagen-linea {
+    width: 12.5rem; /* Ancho de la imagen de la línea horizontal */
+    height: 1.5625rem; /* Altura de la imagen */
+    margin-top: -2%; /* Alineación centrada con margen horizontal */
+  }
+  
 
   /*---------LADO DERECHO----------*/
   #contenedor-derecha-letrero{

@@ -59,6 +59,8 @@ import { PerfilVehicularRegistradoComponent } from './pages/perfil-vehicular-reg
 import { Infraccion6Component } from './pages/infraccion6/infraccion6.component';
 
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -113,7 +115,8 @@ import { Infraccion6Component } from './pages/infraccion6/infraccion6.component'
     MatListModule,
     MatIconModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
     
   ],
   providers: [],

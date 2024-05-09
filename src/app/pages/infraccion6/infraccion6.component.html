@@ -25,11 +25,15 @@
     <h2 id="contenedor-izquierda-letrero">Ingresa los siguientes datos:</h2>
     <!--Elegir Ubicación-->
     <div class="ubicacion">
-      <!-- Icono de Ubicación -->
-    <img id="icono-ubicacion" src="assets/images/marcador.png" alt="Icono de Ubicación" />
-    <!-- Botón para Elegir Ubicación -->
-    <button id="boton-ubicacion">Elegir Ubicación</button>
-</div>
+      <div class="barra-ubicacion">
+        <!-- Icono de Ubicación -->
+        <img id="icono-ubicacion" src="assets/images/marcador.png" alt="Icono de Ubicación" />
+       <!-- Botón para Elegir Ubicación -->
+      <button id="boton-ubicacion" (click)="onGetLocation()">Elegir Ubicación</button>
+      <div *ngIf="address">{{ address }}</div>  <!-- Muestra la dirección aquí -->
+      </div>
+     
+    </div> 
 
 <div class="linea-horizontal">
   <!-- Línea Horizontal -->
