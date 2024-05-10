@@ -7,8 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./formulario-infraccion5.component.css'],
 })
 export class FormularioInfraccion5Component {
+  infractions = [];  // Almacena las infracciones
+  showPopup = false; // Controla la visibilidad del popup
+
+
   constructor(private route: Router) {
     
+  }
+  irAPagina(titulo: string):void{
+    this.route.navigate([titulo]);
+
   }
 
   infracciones = [
@@ -33,22 +41,24 @@ export class FormularioInfraccion5Component {
     // Aquí puedes manejar la lógica para enviar las infracciones, por ejemplo, a un backend
   }
 
-  isPopupVisible = false;
-
-  togglePopup() {
-    this.isPopupVisible = !this.isPopupVisible;
-  }
-
-  takePhoto() {
-    // Lógica para tomar la foto
-  }
-
-  chooseFromGallery() {
-    // Lógica para elegir una foto de la galería
-  }
-
-  irAPagina(titulo: string):void{
-    this.route.navigate([titulo]);
-
-  }
+  mostrarTabla = false;
+  mostrarBoton = true;
+  
+    // Método para alternar la visibilidad del popup
+    toggleTable() {
+      this.mostrarBoton = !this.mostrarBoton;
+      this.mostrarTabla = !this.mostrarTabla;
+    }
+  
+    // Método para añadir una infracción (necesitarías un formulario o algo similar en tu popup)
+    addInfraction(description: string, code: string) {
+     // this.infractions.push({ description, code });
+      this.toggleTable(); // Opcional: cerrar el popup después de añadir
+    }
+  
+    // Método para eliminar una infracción por índice
+    removeInfraction(index: number) {
+      this.infractions.splice(index, 1);
+    }
+ 
 }

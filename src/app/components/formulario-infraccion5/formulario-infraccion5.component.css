@@ -129,6 +129,15 @@ app-footer {
   width: 80%;
 }
 
+.list-container{
+  cursor: pointer;
+  /* Añade estilos para posicionar la imagen */
+  position: relative;
+  top: calc(
+    40px + 50%
+  ); /* Alinea la parte superior de la imagen con la mitad de la altura del botón */
+}
+
 @media (min-width: 992px) {
   /* Estilos Generales */
   body {

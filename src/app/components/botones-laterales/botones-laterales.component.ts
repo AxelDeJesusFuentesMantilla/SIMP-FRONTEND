@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-botones-laterales',
   templateUrl: './botones-laterales.component.html',
-  styleUrls: ['./botones-laterales.component.css']
+  styleUrls: ['./botones-laterales.component.css'],
 })
 export class BotonesLateralesComponent {
-  constructor(private route: Router) {
-    
-  }
-  irAPagina(titulo: string):void{
-    this.route.navigate([titulo]);
+  constructor(public navigationService: NavigationService) {}
 
+  goNext(): void {
+    console.log("siguiente typescript");
+    this.navigationService.goToNextInterface();
+  }
+
+  goBack(): void {
+    console.log("atras typescript");
+    this.navigationService.goToPreviousInterface();
   }
 }

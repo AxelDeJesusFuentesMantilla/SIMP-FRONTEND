@@ -1,0 +1,35 @@
+
+<div class="app">
+
+    <div class="header" role="banner">
+      <img
+        width="60"
+        alt="Logo"
+        src="assets/images/logo1.png"
+      />
+      <img
+      width="60"
+      alt="Logo policia"
+      src="assets/images/policia.svg"
+      
+      
+    />
+    <div class="Movilia">
+      <img
+        width="120"
+        alt="Logo Movilia"
+        src="assets/images/Movialia.png"
+      />
+    </div>
+    </div>
+    
+    
+      <div class="filter-option">
+        <button (click)="showSection('category')">Seleccionar Categoría</button>
+        <button (click)="showSection('manual')">Ingreso Manual</button>
+      </div>
+    
+      <app-category-selection *ngIf="section === 'category'"></app-category-selection>
+      <app-manual-entry *ngIf="section === 'manual'"></app-manual-entry>
+    </div>
+    

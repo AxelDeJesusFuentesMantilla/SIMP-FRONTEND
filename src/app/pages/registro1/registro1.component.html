@@ -20,9 +20,7 @@
   <form class="vehicle-form">
     <div class="form-column">
       <!-- Elementos de la columna izquierda -->
-      <div class="form-group">
-        <input type="text" id="license" class="form-control" placeholder="TEC - 1234" [(ngModel)]="infractorData.placas" name="placas">
-      </div>
+      
       <div class="form-group state">
         <label for="state">Estado:</label>
         <select id="state" name="state" [(ngModel)]="direccionData.estado">
@@ -71,9 +69,4 @@
   </form>
 </div>
 
-<div class="navigation-buttons">
-  <button class="nav-button left-button" (click)="irAPagina('perfil-vehicular')">
-    <</button>
-  <button class="nav-button right-button" (click)="irAPagina('infraccion-2')">
-    ></button>
-</div>
+<app-botones-laterales></app-botones-laterales>

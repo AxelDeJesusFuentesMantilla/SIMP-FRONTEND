@@ -1,0 +1,88 @@
+/* src/app/category-selection/category-selection.component.css */
+:host {
+    display: block;
+    font-family: 'Arial', sans-serif;
+  }
+  
+
+  
+  .category-selection-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .category-selection-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .register-infraccion {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0056b3; /* Un tono de azul que contrasta con el encabezado */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #003366; /* Oscurece el botón al pasar el ratón por encima */
+  }
+  
+  .infraccion-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .infraccion-details h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .infraccion-details p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Añadido para soportar vistas móviles */
+  @media (max-width: 767px) {
+    .category-selection-container {
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+  }
+  

@@ -20,10 +20,21 @@
 
   <div class="add-infractions">
     <!-- Card para hacer clic y abrir el pop-up -->
-    <div class="image-card" (click)="togglePopup()">
+    <div class="image-card" (click)="toggleTable()" *ngIf="mostrarBoton">
       <label for="zone">Agregar Infracciones</label>
       <!-- Añade tu contenido de imagen o texto aquí -->
-      <img class="icono" src="assets/images/Infraccion.png" alt="Añadir fotos" (click)="irAPagina('Filtro-infracciones')" />
+      <img
+        class="icono"
+        src="assets/images/Infraccion.png"
+        alt="Añadir fotos"
+        *ngIf="!mostrarTabla" 
+        (click)="toggleTable()"
+      />
     </div>
-  </div>
+
+    <div class="list-container" *ngIf="mostrarTabla">
+      <app-lista-infraccion></app-lista-infraccion>
+    </div>
+
+  </div>  
 </div>

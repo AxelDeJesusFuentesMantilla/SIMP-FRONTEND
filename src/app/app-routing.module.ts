@@ -8,29 +8,26 @@ import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.compone
 import { InfraccionFotosComponent } from './pages/infraccion-fotos/infraccion-fotos.component';
 import { Infraccion5Component } from './pages/infraccion5/infraccion5.component';
 import { BusquedaIncorrectaComponent } from './pages/busqueda-incorrecta/busqueda-incorrecta.component';
-
 import { PerfilVeicularComponent } from './pages/perfil-veicular/perfil-veicular.component';
-
 import { Infraccion9Component } from './pages/infraccion9/infraccion9.component';
-
 import { Infraccion8Component } from './pages/infraccion8/infraccion8.component'; // Importamos la página
 import { HistorialComponent } from './pages/historial/historial.component';
-
+import { Infraccion3Component } from './pages/infraccion3/infraccion3.component';
+import { ListaInfraccionComponent } from './components/lista-infraccion/lista-infraccion.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'ingreso-de-placas', component: MainContentComponent },
   { path: 'busqueda-lograda', component: BusquedaLogradaComponent },
   { path: 'busqueda-fallo', component: BusquedaIncorrectaComponent },
-  { path: 'perfil-vehicular', component: PerfilVeicularComponent },
-  { path: 'ingreso-de-placas', component: MainContentComponent },
   { path: 'historial', component: HistorialComponent  },
+  { path: 'perfil-vehicular', component: PerfilVeicularComponent }, 
   { path: 'infraccion-1', component: Registro1Component },
   { path: 'infraccion-2', component: Infraccion5Component },
+  { path: 'infraccion-3', component: Infraccion3Component },
   { path: 'infraccion-8', component: Infraccion8Component },
-  { path: 'resumen-infraccion', component: Infraccion9Component },
   { path: 'infraccion-fotos', component: InfraccionFotosComponent },
-  { path: 'busqueda-lograda', component: BusquedaLogradaComponent },
-  { path: 'busqueda-incorrecta', component: BusquedaIncorrectaComponent },
+  { path: 'resumen-infraccion', component: Infraccion9Component },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
